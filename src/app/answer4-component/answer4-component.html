@@ -1,0 +1,14 @@
+<h2>Answer 4</h2>
+    <table border="1">
+      <tr>
+        <th>CODE</th><th>NAME</th><th>GENDER</th>
+        <th>SALARY</th><th>DOB</th>
+      </tr>
+      <tr *ngFor="let e of employees">
+        <td>{{e.code | uppercase}}</td>
+        <td>{{e.name | uppercase}}</td>
+        <td>{{e.gender}}</td>
+        <td>₹ {{e.annualSalary}}</td>
+        <td>{{e.dateOfBirth | date:'fullDate'}}</td>
+      </tr>
+    </table>

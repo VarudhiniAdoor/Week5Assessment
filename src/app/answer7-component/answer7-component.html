@@ -1,0 +1,7 @@
+ <h2>Answer 7</h2>
+    <div *ngIf="employees.length; else noRec">
+      <p>We have employees!</p>
+    </div>
+    <ng-template #noRec>
+      <h1>There are no records</h1>
+    </ng-template>
