@@ -20,19 +20,7 @@ import { ParentComponent } from './answer8/parent.component';
     Answer1Component, Answer2Component, Answer3Component, Answer4Component,
     EmpListComponent, EmpAddComponent, Answer7Component, ParentComponent
   ],
-  template: `
-    <h1>Angular Assessment</h1>
-    <div>
-    <app-answer1></app-answer1> 
-     <app-answer2></app-answer2> 
-    <app-answer3></app-answer3> 
-    <app-answer4></app-answer4> 
-     <app-emplist></app-emplist>
-     <app-empadd></app-empadd>
-    <app-answer7></app-answer7>
-    <app-parent></app-parent>
-  `,
-  styleUrl :'./app.css'
+  templateUrl : './app.html'
 
 })
 export class App {}

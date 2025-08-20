@@ -2,7 +2,7 @@ const productsList = document.getElementById("products");
 const saveForLaterList = document.getElementById("saveforlater");
 
 function getProducts() {
-  return fetch("http://localhost:3000/products")
+  return fetch("http://localhost:3001/products")
     .then(res => res.json())
     .then(products => {
       productsList.innerHTML = "";
@@ -21,7 +21,7 @@ function getProducts() {
 }
 
 function getsaveforlater() {
-  return fetch("http://localhost:3000/saveforlater")
+  return fetch("http://localhost:3001/saveforlater")
     .then(res => res.json())
     .then(favs => {
       saveForLaterList.innerHTML = "";
@@ -39,23 +39,28 @@ function getsaveforlater() {
 }
 
 function addsaveforlater(id) {
-  return fetch(`http://localhost:3000/products/${id}`)
+  return fetch(`http://localhost:3001/products/${id}`)
     .then(res => res.json())
     .then(product => {
-      return fetch("http://localhost:3000/saveforLater", {
+      // Remove id to avoid duplicate key conflict
+      const { id, ...newProduct } = product;
+
+      return fetch("http://localhost:300/saveforlater", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(product)
+        body: JSON.stringify(newProduct)
       });
     })
-    .then(() => getsaveforlater());
+    .then(() => getsaveforlater())
+    .catch(err => console.error("Error adding to saveforlater:", err));
 }
 function deleteAllProducts() {
-  return fetch("http://localhost:3000/products")
+  return fetch("http://localhost:3001/products")
     .then(res => res.json())
     .then(products => {
+      // Delete each product one by one
       const deletePromises = products.map(p =>
-        fetch(`http://localhost:3000/products/${p.id}`, { method: "DELETE" })
+        fetch(`http://localhost:3001/products/${p.id}`, { method: "DELETE" })
       );
 
       return Promise.all(deletePromises);
