@@ -10,13 +10,15 @@ import { Answer4Component } from './answer4-component/answer4-component';
 import { EmpListComponent } from './emp-list-component';
 import { EmpAddComponent } from './emp-add-component';
 import { Answer7Component } from './answer7-component/answer7-component';
+import { ParentComponent } from './answer8/parent.component';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    Answer1Component, Answer2Component,Answer3Component,Answer4Component,EmpListComponent,EmpAddComponent,Answer7Component
+    Answer1Component, Answer2Component, Answer3Component, Answer4Component,
+    EmpListComponent, EmpAddComponent, Answer7Component, ParentComponent
   ],
   template: `
     <h1>Angular Assessment</h1>
@@ -28,8 +30,7 @@ import { Answer7Component } from './answer7-component/answer7-component';
      <app-emplist></app-emplist>
      <app-empadd></app-empadd>
     <app-answer7></app-answer7>
-
-  
+    <app-parent></app-parent>
   `,
   styleUrl :'./app.css'
 

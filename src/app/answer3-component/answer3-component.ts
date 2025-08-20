@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
   imports: [FormsModule],
   templateUrl: './answer3-component.html',  
   styleUrl: './answer3-component.css' 
-
 })
 export class Answer3Component {
   name: string = 'Rahul';

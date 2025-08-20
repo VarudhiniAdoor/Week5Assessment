@@ -1,0 +1,9 @@
+<h2>Parent Component</h2>
+
+<label>Parent Name: </label>
+<input type="text" [(ngModel)]="parentName">
+
+<hr>
+
+<!-- Pass parentName to child -->
+<app-child [name]="parentName"></app-child>
