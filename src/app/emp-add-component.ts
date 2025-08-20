@@ -12,7 +12,7 @@ import { EmpService } from './emp-list-component';
   standalone: true,
   imports: [FormsModule, CommonModule],
   template: `
-    <h2>Answer 6</h2>
+    <h2 style="color: red;">Answer 6</h2>
     <form (ngSubmit)="addEmployee()">
       <input [(ngModel)]="code" name="code" placeholder="Code"><br><br>
       <input [(ngModel)]="name" name="name" placeholder="Name"><br><br>

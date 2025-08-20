@@ -20,7 +20,7 @@ export class EmpService {
   standalone: true,
   imports: [CommonModule],
   template: `
-    <h2>Answer 5</h2>
+    <h2 style="color: red;">Answer 5</h2>
     <ul>
       <li *ngFor="let e of employees">{{e.code}} - {{e.name}}</li>
     </ul>
