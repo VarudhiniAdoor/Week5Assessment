@@ -8,6 +8,7 @@ import { EmpAddComponent } from './emp-add-component';
 import { ParentComponent } from './answer8/parent.component';
 import { Answer7Component } from './answer7-component/answer7-component';
 
+
 export const routes: Routes = [
   { path: '', redirectTo: 'q1', pathMatch: 'full' },
   { path: 'q1', component: Answer1Component },

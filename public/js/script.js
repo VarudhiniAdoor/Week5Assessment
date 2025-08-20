@@ -1,6 +1,6 @@
-const API = 'http://localhost:3000';
+const API = 'http://localhost:3001';
 const PRODUCTS = `${API}/products`;
-const SAVEFORLATER = `${API}/saveforLater`; // matches the key in db.json (capital L)
+const SAVEFORLATER = `${API}/saveforLater`; 
 
 function renderList(targetUlId, items, isProducts) {
   const ul = document.getElementById(targetUlId);
