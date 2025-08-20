@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Q9/Q10 Products & saveforLater</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 16px; }
+    h2 { margin-top: 24px; }
+    ul { list-style: none; padding: 0; display: grid; gap: 8px; }
+    li { border: 1px solid #ddd; padding: 10px; border-radius: 8px; }
+    .row { display:flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    button { cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Products & saveforLater (Fetch + Promises)</h1>
+
+  <div class="row">
+    <button id="deleteAll">Delete ALL Products (Q10)</button>
+  </div>
+
+  <h2>Products</h2>
+  <ul id="products"></ul>
+
+  <h2>saveforLater</h2>
+  <ul id="saveforlater"></ul>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
